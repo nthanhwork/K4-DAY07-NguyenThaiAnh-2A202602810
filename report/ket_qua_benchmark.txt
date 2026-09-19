@@ -1,0 +1,107 @@
+================================================================================
+KẾT QUẢ BENCHMARK TRUY XUẤT (Lab 7) — Chiến lược: HEADING
+Số chunk đã nạp vào EmbeddingStore: 36 chunks
+Embedding backend: MockEmbedder (băm MD5)
+================================================================================
+
+--- Câu 1: Mật khẩu mặc định và tên đăng nhập để truy cập hệ thống tài liệu số là gì? ---
+  [Filter]: {'audience': 'student'}
+  [Gold Document]: student-library-borrowing | [Chuỗi đặc trưng]: '123456'
+  [Gold Answer]: Tên đăng nhập là mã sinh viên viết thường, mật khẩu mặc định là 123456.
+  Top-3 kết quả truy xuất:
+    1. [Score: +0.3390] ID=student-library-borrowing#1 Doc=student-library-borrowing 
+       Trích: "## 1. Hướng dẫn mượn tài liệu in - **Địa chỉ truy cập tra cứu danh mục tài liệu in:** `htt..."
+    2. [Score: +0.2652] ID=student-library-borrowing#2 Doc=student-library-borrowing [CHỨA ĐÁP ÁN]
+       Trích: "## 2. Hướng dẫn truy cập và mượn tài liệu số - **Địa chỉ truy cập hệ thống tài liệu số:** ..."
+    3. [Score: +0.1518] ID=student-library-borrowing#0 Doc=student-library-borrowing 
+       Trích: "# Thông báo về việc mượn tài liệu in và tài liệu số cho sinh viên khóa D19  Trung tâm Thôn..."
+  -> Đánh giá: Level 1 (Doc ID): ĐẠT | Level 2 (Nội dung): ĐẠT (Hạng 2)
+  -> Điểm câu này: 1 / 2 điểm
+  -> Agent trả lời: Tên đăng nhập là mã sinh viên viết thường (Ví dụ: `b17dccn123`) và mật khẩu mặc định là `123456`.
+
+--- Câu 2: Mượn tài liệu kho mở về nhà đối với sinh viên và cán bộ giảng viên có thời hạn tối đa bao nhiêu ngày? ---
+  [Gold Document]: library-rules | [Chuỗi đặc trưng]: '02 cuốn / 07 ngày'
+  [Gold Answer]: Sinh viên được mượn 02 cuốn / 07 ngày; cán bộ, giảng viên được mượn 03 cuốn / 15 ngày.
+  Top-3 kết quả truy xuất:
+    1. [Score: +0.2542] ID=library-rules#15 Doc=library-rules 
+       Trích: "## 4. Bảo quản tài sản, khen thưởng và kỷ luật   - Khóa thẻ thư viện từ **10 ngày đến vĩnh..."
+    2. [Score: +0.2163] ID=library-reader-service#3 Doc=library-reader-service 
+       Trích: "## 3. Quy định phục vụ tại Phòng Mượn - **Thủ tục mượn sách:** Bạn đọc khi đến mượn sách c..."
+    3. [Score: +0.1994] ID=library-rules#4 Doc=library-rules 
+       Trích: "## 1. Những quy định chung - **Điều 4:** Kiểm tra số lượng và tình trạng tài liệu trước kh..."
+  -> Đánh giá: Level 1 (Doc ID): ĐẠT | Level 2 (Nội dung): TRƯỢT
+  -> Điểm câu này: 0 / 2 điểm
+  -> Agent trả lời: Ngữ cảnh không chứa thông tin này.
+
+--- Câu 3: Thời gian sử dụng máy tính tại phòng truy cập Internet của thư viện được quy định thế nào? ---
+  [Gold Document]: library-rules | [Chuỗi đặc trưng]: '01 giờ/buổi'
+  [Gold Answer]: Mỗi máy chỉ 01 người sử dụng, thời gian tối đa là 01 giờ/buổi.
+  Top-3 kết quả truy xuất:
+    1. [Score: +0.2144] ID=library-rules#7 Doc=library-rules 
+       Trích: "### 2.1 Đối với phòng đọc kho đóng - **Điều 7:** Viết phiếu yêu cầu đầy đủ, rõ ràng (không..."
+    2. [Score: +0.1796] ID=library-rules#9 Doc=library-rules 
+       Trích: "### 2.2 Đối với phòng đọc kho mở   - **Học viên, sinh viên:** Số lượng mượn tối đa **02 cu..."
+    3. [Score: +0.1500] ID=library-rules#15 Doc=library-rules 
+       Trích: "## 4. Bảo quản tài sản, khen thưởng và kỷ luật   - Khóa thẻ thư viện từ **10 ngày đến vĩnh..."
+  -> Đánh giá: Level 1 (Doc ID): ĐẠT | Level 2 (Nội dung): TRƯỢT
+  -> Điểm câu này: 0 / 2 điểm
+  -> Agent trả lời: Ngữ cảnh không chứa thông tin về thời gian sử dụng máy tính tại phòng truy cập Internet của thư viện.
+
+--- Câu 4: Giấy tờ bạn đọc cần xuất trình khi đến mượn sách tại phòng mượn là gì? ---
+  [Gold Document]: library-reader-service | [Chuỗi đặc trưng]: 'Thẻ sinh viên'
+  [Gold Answer]: Mang theo Thẻ sinh viên hoặc CMTND/CCCD và đọc đúng mã sinh viên được cấp.
+  Top-3 kết quả truy xuất:
+    1. [Score: +0.2939] ID=library-opac#2 Doc=library-opac 
+       Trích: "## 2. Các tính năng chính dành cho sinh viên - **Tra cứu mục lục sách:** Tìm kiếm theo từ ..."
+    2. [Score: +0.2524] ID=student-library-borrowing#2 Doc=student-library-borrowing 
+       Trích: "## 2. Hướng dẫn truy cập và mượn tài liệu số - **Địa chỉ truy cập hệ thống tài liệu số:** ..."
+    3. [Score: +0.2251] ID=library-rules#12 Doc=library-rules 
+       Trích: "## 3. Nội quy phòng mượn - **Điều 21:** Viết phiếu yêu cầu đầy đủ, rõ ràng. - **Điều 22: S..."
+  -> Đánh giá: Level 1 (Doc ID): TRƯỢT | Level 2 (Nội dung): TRƯỢT
+  -> Điểm câu này: 0 / 2 điểm
+  -> Agent trả lời: Ngữ cảnh không chứa thông tin về giấy tờ bạn đọc cần xuất trình khi đến mượn sách tại phòng mượn.
+
+--- Câu 5: Phòng Đọc thư viện tạm ngừng phục vụ từ ngày nào để sửa chữa nội thất? ---
+  [Gold Document]: library-notice | [Chuỗi đặc trưng]: '4/7/2022'
+  [Gold Answer]: Từ ngày 04/07/2022 phòng đọc tạm thời không phục vụ để sửa chữa nội thất.
+  Top-3 kết quả truy xuất:
+    1. [Score: +0.3155] ID=library-rules#1 Doc=library-rules 
+       Trích: "## Giờ mở cửa Thư viện - Buổi sáng: 8h00 – 11h30 - Buổi chiều: 13h30 – 19h00 - Email liên ..."
+    2. [Score: +0.2967] ID=library-rules#7 Doc=library-rules 
+       Trích: "### 2.1 Đối với phòng đọc kho đóng - **Điều 7:** Viết phiếu yêu cầu đầy đủ, rõ ràng (không..."
+    3. [Score: +0.1808] ID=library-rules#13 Doc=library-rules 
+       Trích: "## 3. Nội quy phòng mượn   - **Sinh viên các hệ khác, học viên cao học, nghiên cứu sinh:**..."
+  -> Đánh giá: Level 1 (Doc ID): TRƯỢT | Level 2 (Nội dung): TRƯỢT
+  -> Điểm câu này: 0 / 2 điểm
+  -> Agent trả lời: Ngữ cảnh không chứa thông tin này.
+
+================================================================================
+THỰC NGHIỆM A/B BẮT BUỘC: SO SÁNH CÓ FILTER VS KHÔNG FILTER (Câu 1)
+================================================================================
+Câu hỏi: "Mật khẩu mặc định và tên đăng nhập để truy cập hệ thống tài liệu số là gì?"
+
+[A] CÓ FILTER (metadata_filter={'audience': 'student'}):
+  1. Score=+0.3390 | ID=student-library-borrowing#1 | Audience=student 
+     "## 1. Hướng dẫn mượn tài liệu in - **Địa chỉ truy cập tra cứu danh mục tài liệu in:** `htt..."
+  2. Score=+0.2652 | ID=student-library-borrowing#2 | Audience=student [CHỨA ĐÁP ÁN]
+     "## 2. Hướng dẫn truy cập và mượn tài liệu số - **Địa chỉ truy cập hệ thống tài liệu số:** ..."
+  3. Score=+0.1518 | ID=student-library-borrowing#0 | Audience=student 
+     "# Thông báo về việc mượn tài liệu in và tài liệu số cho sinh viên khóa D19  Trung tâm Thôn..."
+
+[B] KHÔNG FILTER (toàn bộ corpus):
+  1. Score=+0.3390 | ID=student-library-borrowing#1 | Audience=student 
+     "## 1. Hướng dẫn mượn tài liệu in - **Địa chỉ truy cập tra cứu danh mục tài liệu in:** `htt..."
+  2. Score=+0.2652 | ID=student-library-borrowing#2 | Audience=student [CHỨA ĐÁP ÁN]
+     "## 2. Hướng dẫn truy cập và mượn tài liệu số - **Địa chỉ truy cập hệ thống tài liệu số:** ..."
+  3. Score=+0.1904 | ID=library-rules#9 | Audience=all 
+     "### 2.2 Đối với phòng đọc kho mở   - **Học viên, sinh viên:** Số lượng mượn tối đa **02 cu..."
+
+[KẾT LUẬN A/B]:
+  => Kết quả hai lần trả về cùng tài liệu.
+
+================================================================================
+TỔNG KẾT CHIẾN LƯỢC: HEADING
+- Chấm Level 1 (Khớp Doc ID): 3 / 5 câu
+- Chấm Level 2 (Chuỗi đặc trưng chứa đáp án): 1 / 5 câu
+- Tổng điểm đánh giá (Rubric): 1 / 10 điểm
+================================================================================
